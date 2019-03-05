@@ -2,6 +2,7 @@ numpy
 scipy
 Pillow
 cython
+Cython
 matplotlib
 scikit-image
 tensorflow>=1.3.0
@@ -10,5 +11,4 @@ opencv-python
 h5py
 imgaug
 IPython[all]
-Cython
 pycocotools
