@@ -1,9 +1,7 @@
 
-#### 说明
+### 说明
 
 该项目为 [matterport/Mask_RCNN](https://github.com/matterport/Mask_RCNN) 的修改版本，在原 License 授权下改编以适用于教学用途。
-
-原 License 如下：
 
 ```
 Mask R-CNN
