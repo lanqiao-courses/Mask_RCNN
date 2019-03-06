@@ -3,7 +3,6 @@ scipy
 lxml
 pillow
 cython
-Cython
 matplotlib
 contextlib2
 scikit-image
@@ -13,4 +12,3 @@ opencv-python
 h5py
 imgaug
 IPython[all]
-pycocotools
