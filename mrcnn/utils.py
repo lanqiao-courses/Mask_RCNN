@@ -842,11 +842,11 @@ def download_trained_weights(coco_model_path, verbose=1):
     coco_model_path: local path of COCO trained weights
     """
     if verbose > 0:
-        print("Downloading pretrained model to " + coco_model_path + " ...")
+        print("正在下载预训练模型, 请耐心等待 " + coco_model_path + " ...")
     with urllib.request.urlopen(COCO_MODEL_URL) as resp, open(coco_model_path, 'wb') as out:
         shutil.copyfileobj(resp, out)
     if verbose > 0:
-        print("... done downloading pretrained model!")
+        print("模型下载完成.")
 
 
 def norm_boxes(boxes, shape):
