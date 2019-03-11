@@ -23,8 +23,8 @@ import warnings
 from distutils.version import LooseVersion
 
 # URL from which to download the latest COCO trained weights
-COCO_MODEL_URL = "https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5"
-
+GITHUB_URL = "https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5"
+SYL_URL = "http://labfile.oss.aliyuncs.com/courses/1233/mask_rcnn_coco.h5"
 
 ############################################################
 #  Bounding Boxes
@@ -836,11 +836,16 @@ def batch_slice(inputs, graph_fn, batch_size, names=None):
     return result
 
 
-def download_trained_weights(coco_model_path, verbose=1):
+def download_trained_weights(coco_model_path, mirror='shiyanlou', verbose=1):
     """Download COCO trained weights from Releases.
 
     coco_model_path: local path of COCO trained weights
     """
+    if mirror == 'shiyanlou':
+        COCO_MODEL_URL = SYL_URL
+    else:
+        COCO_MODEL_URL = GITHUB_URL
+
     if verbose > 0:
         print("正在下载预训练模型, 请耐心等待 " + coco_model_path + " ...")
     with urllib.request.urlopen(COCO_MODEL_URL) as resp, open(coco_model_path, 'wb') as out:
