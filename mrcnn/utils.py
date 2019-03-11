@@ -843,10 +843,10 @@ def download_trained_weights(coco_model_path, mirror='shiyanlou', verbose=1):
     """
     if mirror == 'shiyanlou':
         COCO_MODEL_URL = SYL_URL
-        print("正在从实验楼服务器下载预训练模型")
+        print("正在从实验楼服务器下载预训练模型, 请耐心等待.")
     else:
         COCO_MODEL_URL = GITHUB_URL
-        print("正在从 AWS 服务器下载预训练模型")
+        print("正在从 AWS 服务器下载预训练模型, 请耐心等待.")
 
     if verbose > 0:
         print("模型存放至 " + coco_model_path + " ...")
